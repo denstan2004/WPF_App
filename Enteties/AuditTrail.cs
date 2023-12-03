@@ -8,7 +8,7 @@ namespace MyTestApp.Enteties
 {
     internal class AuditTrail
     {
-        public int AuditId { get; set; }
+        public int ID { get; set; }
         public int UserId { get; set; }
         public string Action { get; set; }
         public DateTime Timestamp { get; set; }

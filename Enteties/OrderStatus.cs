@@ -8,7 +8,7 @@ namespace MyTestApp.Enteties
 {
     internal class OrderStatus
     {
-        public int StatusId { get; set; }
+        public int ID { get; set; }
         public string StatusName { get; set; }
 
         // Зв'язок зі замовленнями (один до багатьох)

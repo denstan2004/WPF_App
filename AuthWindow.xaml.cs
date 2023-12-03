@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyTestApp.Enteties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp1.DAO;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MyTestApp
 {
@@ -23,6 +26,7 @@ namespace MyTestApp
         {
             InitializeComponent();
         }
+        AplicationDbContext aplication=new AplicationDbContext();
 
         private void Button_Redirect_Register(object sender, RoutedEventArgs e)
         {
@@ -37,13 +41,21 @@ namespace MyTestApp
             string password = TextBoxReg.Password.Trim();
 
 
-            if (login.Length < 5)
+            User user = aplication.users.SingleOrDefault(e => login == e.Login);
+            if (user != null)
             {
-                MessageBox.Show("login can`t be less then 8 characters");
+                if(user.Password==password)
+                {
+                    
+                }
+                else
+                {
+                    MessageBox.Show("inccorect password");
+                }
             }
-            else if (password.Length < 5)
+            else
             {
-                MessageBox.Show("password can`t be less then 8 characters");
+                MessageBox.Show("no such user");
             }
 
         }

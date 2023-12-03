@@ -48,3 +48,5 @@ D:\Users\DENNI\projects\testapp\MyTestApp\WpfApp1\bin\Debug\net7.0-windows\runti
 D:\Users\DENNI\projects\testapp\MyTestApp\WpfApp1\bin\Debug\net7.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
 D:\Users\DENNI\projects\testapp\MyTestApp\WpfApp1\obj\Debug\net7.0-windows\App.baml
 D:\Users\DENNI\projects\testapp\MyTestApp\WpfApp1\obj\Debug\net7.0-windows\WpfApp1.csproj.CopyComplete
+D:\Users\DENNI\projects\testapp\MyTestApp\WpfApp1\obj\Debug\net7.0-windows\CatalogWindowNoAuth.g.cs
+D:\Users\DENNI\projects\testapp\MyTestApp\WpfApp1\obj\Debug\net7.0-windows\CatalogWindowNoAuth.baml

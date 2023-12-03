@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1;
+using WpfApp1.DAO;
 
 namespace MyTestApp
 {
@@ -25,7 +27,7 @@ namespace MyTestApp
         {
             InitializeComponent();
         }
-
+        AplicationDbContext aplication =new AplicationDbContext();
         private void Button_Reg_Click(object sender, RoutedEventArgs e)
         {
 
@@ -47,9 +49,17 @@ namespace MyTestApp
             }
             else
             {
-                User user = new User();
-                user.Login = login;
-                user.Password = password;
+                User user = aplication.users.SingleOrDefault(e => login == e.Login);
+                if(user != null)
+                {
+                    MessageBox.Show("user already exists");
+                }
+                else
+                {
+                    User user1 = new (login, password);
+                    aplication.Add(user1);
+                }
+             
             }
 
 
@@ -60,6 +70,13 @@ namespace MyTestApp
             AuthWindow authWindow = new AuthWindow();
             authWindow.Show();
             Hide();
+        }
+
+        private void Catalog_Redirect(object sender, RoutedEventArgs e)
+        {
+            CatalogWindowNoAuth catalogWindowNoAuth = new CatalogWindowNoAuth();
+            catalogWindowNoAuth.Show();
+            Hide() ;
         }
     }
 }

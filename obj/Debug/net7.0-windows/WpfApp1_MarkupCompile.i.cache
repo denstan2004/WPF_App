@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 D:\Users\DENNI\projects\testapp\MyTestApp\WpfApp1\App.xaml
-2-1312940909
+3-1936771698
 
-191209363346
+24-371960399
 217-272261378
-AuthWindow.xaml;MainWindow.xaml;
+AuthWindow.xaml;CatalogWindowNoAuth.xaml;MainWindow.xaml;
 
-False
+True
 

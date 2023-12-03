@@ -8,7 +8,7 @@ namespace MyTestApp.Enteties
 {
     internal class Sales
     {
-        public int SaleId { get; set; }
+        public int ID { get; set; }
         public int ProductId { get; set; }
         public int QuantitySold { get; set; }
         public DateTime SaleDate { get; set; }

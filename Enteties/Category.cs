@@ -8,7 +8,7 @@ namespace MyTestApp.Enteties
 {
     internal class Category
     {
-        public int CategoryId { get; set; }
+        public int ID { get; set; }
         public string CategoryName { get; set; }
         public string Description { get; set; }
 
